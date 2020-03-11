@@ -14,4 +14,14 @@ For a given **n**, the length of the cycle **n** will be the number of generated
 In the example above, the length of loop 22 is 16. For two given numbers *i* and *j*, 
 you must determine the maximum loop length for all numbers between *i* and *j*, including both endpoints.
 ***
+## Input data
+Input your data into _src/main/java/resource/input.txt_
+
+**Example**: 1 10
+
+## Output data
+Output data will be located in _src/main/java/resource/output.txt_
+
+**Example:** 1 10 20
+***
 The programm was written using Java and JUnit tests, also I used Maven framework.
