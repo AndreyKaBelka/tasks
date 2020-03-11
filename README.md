@@ -1,5 +1,4 @@
 ## Problem situation
-***
 Consider the following algorithm for generating a sequence of numbers. Let's start with an integer **n**. 
 If **n** is even, then divide it by 2. If **n** is odd, then multiply it by 3 and add 1. 
 We will repeat this process with the new received number until it becomes equal to 1. 
