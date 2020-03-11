@@ -31,7 +31,7 @@ public class Main {
         }
     }
 
-    private static int getSequence(int start, int end){
+    static int getSequence(int start, int end){
         int count;
         int max_count = 0;
 
@@ -53,7 +53,7 @@ public class Main {
         return max_count;
     }
 
-    private static int sequenceNextNum(int num) {
+    static int sequenceNextNum(int num) {
         if ((num & 1) == 0) {
             return num >> 1;
         } else {
