@@ -17,23 +17,7 @@ public class Main {
         int start = scanner.nextInt();
         int end = scanner.nextInt();
 
-        int count;
-        int max_count = 0;
-
-        for (int i = start; i <= end; i++) {
-            int num = i;
-            count = 0;
-
-            while (num != 1) {
-                count++;
-                num = sequence(num);
-            }
-            count++;
-
-            if (max_count < count) {
-                max_count = count;
-            }
-        }
+        int max_count = getSequence(start, end);
         File file_output = new File("./src/main/resources/output.txt");
 
         if(file_output.createNewFile()){
@@ -47,7 +31,29 @@ public class Main {
         }
     }
 
-    private static int sequence(int num) {
+    private static int getSequence(int start, int end){
+        int count;
+        int max_count = 0;
+
+        for (int i = start; i <= end; i++) {
+            int num = i;
+            count = 0;
+
+            while (num != 1) {
+                count++;
+                num = sequenceNextNum(num);
+            }
+            count++;
+
+            if (max_count < count) {
+                max_count = count;
+            }
+        }
+
+        return max_count;
+    }
+
+    private static int sequenceNextNum(int num) {
         if ((num & 1) == 0) {
             return num >> 1;
         } else {
